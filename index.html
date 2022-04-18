@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card__img">
+            <img src="./profile.jpg" alt="">
+        </div>
+        <h2>Nguyen Van Tien</h2>
+        <p>Front-End Developer</p>
+        <div class="card__social">
+            <a target="_blank" href="https://www.facebook.com/tienptgrp1234/"><i class='bx bxl-facebook'></i></a>
+            <a target="_blank" href="https://www.instagram.com/tien.ptgrp/"><i class='bx bxl-instagram' ></i></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCWLRrMn3ZjaMBlpjnh-lbvQ"><i class='bx bxl-youtube' ></i></a>
+            <a target="_blank" href=""><i class='bx bxl-tiktok' ></i></a>
+        </div>
+        <button class="card__button--contact">Contact Me</button>
+    </div>
+    <div class="modal">
+        <div class="modal__container">
+            <div class="modal__container--header">
+                More infomation
+
+            </div>
+            <div class="modal__container--info">
+                <p><i class='bx bx-phone' ></i>: 0869318118</p>
+                <p><i class='bx bxl-gmail' ></i>: tienhg201@gmail.com</p>
+                <p><i class='bx bx-home-alt' ></i>: HH1A Linh Dam, Hoang mai, Ha Noi</p>
+            </div>
+            <div class="modal__container--button">
+                <button>Done</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const contactBtn = document.querySelector('.card__button--contact')
+        const modalContact = document.querySelector('.modal')
+        const doneBtn = document.querySelector('.modal__container--button button')
+        function addClassName() {
+            modalContact.classList.add('open')
+        }
+
+        function removeClassName() {
+            modalContact.classList.remove('open')
+        }
+        contactBtn.addEventListener('click', addClassName)
+        modalContact.addEventListener('click', removeClassName)
+    </script>
+</body>
+
+</html>
